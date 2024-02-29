@@ -20,3 +20,8 @@ social: true  # includes social icons at the bottom of the page
 
 My PhD started in October 2022 under the supervision of [Pierre-Alain Fouque](https://www.di.ens.fr/~fouque/) and [Mohamed Sabt](https://people.irisa.fr/Mohamed.Sabt/).
 
+My thesis is focusing on static analysis of cryptographic code in order to detect a subclass of vulnerabilities, appearing whenever a cryptographic code does not respect constant time programming principles.
+A single violation of those principles make the code vulnerable to side-channel attack. 
+
+I am currently working on a out-of-tree plugin within [GCC's Static Analyzer](https://gcc.gnu.org/onlinedocs/gcc/Static-Analyzer-Options.html#index-fanalyzer) to detect those kind of vulnerabilities.
+Source code is available [here](https://gitlab.inria.fr/pphilipp/gcc-plugin-ct).
