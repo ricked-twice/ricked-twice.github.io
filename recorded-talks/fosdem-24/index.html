@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en" >
+<head>
+	<!-- 2026-02-02 Mon 14:01 -->
+	<meta charset="UTF-8" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#ff7800" />
+		<meta name="theme-color" content="#ffa348" media="(prefers-color-scheme:dark)" />
+
+<meta http-equiv="content-security-policy"
+content="default-src 'none';font-src &#x27;self&#x27;;img-src &#x27;self&#x27; https: data:;media-src &#x27;self&#x27; https:;style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;;frame-src https:&#x2F;&#x2F;player.vimeo.com https:&#x2F;&#x2F;www.youtube-nocookie.com https:&#x2F;&#x2F;toot.community;base-uri &#x27;none&#x27;;form-action &#x27;none&#x27;;connect-src 'self' https://toot.community;script-src 'self' 'self'" />
+
+	<title>Talk at FOSDEM'24 - Pierrick Philippe</title>
+	<link rel="canonical" href="https://ricked-twice.github.io/recorded-talks/fosdem-24/" /><link rel="icon" type="image/png" href="https://ricked-twice.github.io/favicon.png" />
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://ricked-twice.github.io/apple-touch-icon.png" />
+<style type="text/css">
+	:root {--accent-color: #ff7800;}[data-theme="dark"] {
+			--accent-color: #ffa348;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root:not([data-theme="light"]) {
+				--accent-color: #ffa348;
+			}
+		}</style>
+
+			<link type="text/css" rel="stylesheet" href="https://ricked-twice.github.io/style.css" />
+			<script type="text/javascript" defer  src="https://ricked-twice.github.io/closable.js"></script>
+			<script type="text/javascript" defer  src="https://ricked-twice.github.io/copy-button.js"></script>
+			<script type="text/javascript" defer  src="https://ricked-twice.github.io/theme-switcher.js"></script>
+
+	<meta property="og:site_name" content="Pierrick Philippe" />
+	<meta property="og:title" content="Talk at FOSDEM'24 - Pierrick Philippe" />
+	<meta property="og:url" content="https://ricked-twice.github.io/recorded-talks/fosdem-24/" />
+	<meta property="og:description" content="Talk in the GCC&#x27;s devroom at FOSDEM&#x27;24 about leveraging secret-related analysis in GCC Static Analyzer" /><meta property="og:image" content="https://ricked-twice.github.io/card.png" /><meta property="og:locale" content="en_US" />
+</head>
+
+<body>
+
+		
+<header id="site-nav">
+	<nav>
+		<a href="#main-content" tabindex="0">
+			Skip to Main Content
+		</a>
+		<ul>
+			<li id="home">
+				<a href="https://ricked-twice.github.io">
+					<i class="icon"></i>Pierrick Philippe</a>
+			</li>
+			<li class="divider"></li><li>
+						<details class="closable">
+							<summary>Research</summary>
+							<ul>
+										<li>
+											<a href="https://ricked-twice.github.io/publications/">Publications</a>
+										</li>
+										<li>
+											<a href="https://ricked-twice.github.io/recorded-talks/">Recorded Talks</a>
+										</li></ul>
+						</details>
+			 		 </li>
+				<li id="theme-switcher">
+					<details class="closable">
+						<summary class="circle" title="Theme">
+							<i class="icon"></i>
+						</summary>
+						<ul>
+							<li>
+								<button class="circle" id="theme-light" title="Switch to Light Theme">
+									<i class="icon"></i>
+								</button>
+							</li>
+							<li>
+								<button class="circle" id="theme-dark" title="Switch to Dark Theme">
+									<i class="icon"></i>
+								</button>
+							</li>
+							<li>
+								<button class="circle" id="theme-system" title="Use System Theme">
+									<i class="icon"></i>
+								</button>
+							</li>
+						</ul>
+					</details>
+				</li>
+		</ul>
+	</nav>
+</header>
+<main id="main-content">
+		<article><div id="heading"><p>
+				<small>
+					<time datetime=" 2024-02-04T00:00:00+00:00">Published on
+						February 04, 2024</time></small>
+			</p><h1>Talk at FOSDEM&#x27;24</h1><p>
+				<small><span>2 minutes read</span></small>
+			</p>
+	</div>
+
+	<div id="buttons-container"><a id="go-to-top" href="#top" title="Go to Top"><i class="icon"></i></a><a id="share" href="https://shareopenly.org/share/?url=https:&#x2F;&#x2F;ricked-twice.github.io&#x2F;recorded-talks&#x2F;fosdem-24&#x2F;&text=Talk%20in%20the%20GCC%27s%20devroom%20at%20FOSDEM%2724%20about%20leveraging%20secret-related%20analysis%20in%20GCC%20Static%20Analyzer" rel="" title="Share"><i class="icon"></i></a><a id="issue" href="https:&#x2F;&#x2F;codeberg.org&#x2F;daudix&#x2F;duckquill&#x2F;issues" rel="" title="File an Issue"><i class="icon"></i></a></div><p>I gave a talk on the 4th of February 2024 within the GCC’s devroom at <a rel="external" href="https://fosdem.org/2024/">FOSDEM’24</a>.</p>
+<p>The talk is focusing on the modification I have done within GCC’s Static Analyzer in order to implement a constant time analysis on cryptographic code.
+It is centered on GCC itself and no heavy cryptography background is required.</p>
+<p>I would like to thank the GCC devroom organizers for giving me the opportunity to present my work at FOSDEM’24!</p>
+<p>I invite you to have a look at the <a rel="external" href="https://fosdem.org/2024/schedule/track/gcc/">other talks in GCC devroom</a> given that day.
+Recordings and additional resources is available for each of them, so feel free to check them out!</p>
+<p>Here is the recording of my talk:</p>
+<video width="800" height="500" controls>
+  <source src="/videos/fosdem_24/fosdem_24_talk.mp4" type="video/mp4">
+  <source src="/videos/fosdem_24/fosdem_24_talk.av1.webm" type="video/ogg"> -->
+  <source src="https://ftp.belnet.be/mirror/FOSDEM/video/2024/k4201/fosdem-2024-2635-unlocking-secret-analysis-in-gcc-static-analyzer.mp4" type="video/mp4">
+  <source src="https://ftp.belnet.be/mirror/FOSDEM/video/2024/k4201/fosdem-2024-2635-unlocking-secret-analysis-in-gcc-static-analyzer.av1.webm" type="video/ogg">
+<p>If you see this text, your browser does not support the HTML5 video tag.
+Here are several links to the video:</p>
+<ul>
+<li><a rel="external" href="https://av.tib.eu/media/71227">https://av.tib.eu/media/71227</a></li>
+<li>And in last resort, downloadable here:
+<ul>
+<li>On this website in <a href="/videos/fosdem_24/fosdem_24_talk.av1.webm">WebM</a> or in <a href="/videos/fosdem_24/fosdem_24_talk.mp4">MP4</a>.</li>
+<li><a rel="external" href="https://ftp.belnet.be/mirror/FOSDEM/video/2024/k4201/fosdem-2024-2635-unlocking-secret-analysis-in-gcc-static-analyzer.mp4">https://ftp.belnet.be/mirror/FOSDEM/video/2024/k4201/fosdem-2024-2635-unlocking-secret-analysis-in-gcc-static-analyzer.mp4</a>.
+</video></li>
+</ul>
+</li>
+</ul>
+
+</article><hr />
+	<nav id="post-nav"><a class="post-nav-item post-nav-next" href="https:&#x2F;&#x2F;ricked-twice.github.io&#x2F;recorded-talks&#x2F;prisc-26&#x2F;">
+				<div class="nav-arrow">Next</div>
+				<span class="post-title">Talk at PriSC&#x27;26</span>
+			</a></nav>
+		
+	<span id="copy-code-text" class="hidden">Copy Code</span>
+
+	</main>
+	<footer id="site-footer">
+			<p>&copy; Pierrick Philippe, 2026</p>
+		<p>
+			<small>Powered by <a class="link external" href="https://www.getzola.org" rel="">Zola</a> and <a class="link external" href="https://duckquill.daudix.one" rel="">Duckquill</a>
+			</small>
+		</p>
+		<ul id="socials">
+				<li>
+					<a href="https://github.com/ricked-twice" rel=" me" title="GitHub">
+						<i class="icon" style='--icon: url("data:image/svg+xml,%3Csvg role=&#x27;img&#x27; viewBox=&#x27;0 0 24 24&#x27; xmlns=&#x27;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&#x27;%3E%3Ctitle%3EGitHub%3C&#x2F;title%3E%3Cpath d=&#x27;M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12&#x27;&#x2F;%3E%3C&#x2F;svg%3E")'></i>
+						<span>GitHub</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://gitlab.inria.fr/pphilipp" rel=" me" title="GitLab Inria">
+						<i class="icon" style='--icon: url("data:image/svg+xml,%3Csvg role=&#x27;img&#x27; viewBox=&#x27;0 0 24 24&#x27; xmlns=&#x27;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&#x27;%3E%3Ctitle%3EGitLab%3C&#x2F;title%3E%3Cpath d=&#x27;m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z&#x27;&#x2F;%3E%3C&#x2F;svg%3E")'></i>
+						<span>GitLab Inria</span>
+					</a>
+				</li>
+				<li>
+					<a href="mailto:pierrick.philippe@irisa.fr" rel=" me" title="Send me an email!">
+						<i class="icon" style='--icon: url("data:image/svg+xml,%3Csvg xmlns=&#x27;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&#x27; width=&#x27;800px&#x27; height=&#x27;800px&#x27; viewBox=&#x27;0 0 24 24&#x27; fill=&#x27;none&#x27;%3E%3Cg id=&#x27;style=fill&#x27;%3E%3Cg id=&#x27;email&#x27;%3E%3Cpath id=&#x27;Subtract&#x27; fill-rule=&#x27;evenodd&#x27; clip-rule=&#x27;evenodd&#x27; d=&#x27;M7 2.75C5.38503 2.75 3.92465 3.15363 2.86466 4.1379C1.79462 5.13152 1.25 6.60705 1.25 8.5V15.5C1.25 17.393 1.79462 18.8685 2.86466 19.8621C3.92465 20.8464 5.38503 21.25 7 21.25H17C18.615 21.25 20.0754 20.8464 21.1353 19.8621C22.2054 18.8685 22.75 17.393 22.75 15.5V8.5C22.75 6.60705 22.2054 5.13152 21.1353 4.1379C20.0754 3.15363 18.615 2.75 17 2.75H7ZM19.2285 8.3623C19.5562 8.10904 19.6166 7.63802 19.3633 7.31026C19.1101 6.98249 18.6391 6.9221 18.3113 7.17537L12.7642 11.4616C12.3141 11.8095 11.6858 11.8095 11.2356 11.4616L5.6886 7.17537C5.36083 6.9221 4.88982 6.98249 4.63655 7.31026C4.38328 7.63802 4.44367 8.10904 4.77144 8.3623L10.3185 12.6486C11.3089 13.4138 12.691 13.4138 13.6814 12.6486L19.2285 8.3623Z&#x27; fill=&#x27;%23000000&#x27;&#x2F;%3E%3C&#x2F;g%3E%3C&#x2F;g%3E%3C&#x2F;svg%3E")'></i>
+						<span>Send me an email!</span>
+					</a>
+				</li>
+		</ul>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+[[publi]]
+name = "GnuZero"
+subtitle = "A Compiler-Based Zeroization Static Detection Tool for the Masses"
+authors = ["Pierrick Philippe", "Mohamed Sabt", "Pierre-Alain Fouque"]
+desc = "Published in the proceedings of [DSN'25](https://dsn2025.github.io/). Received the __Best Paper__ and __Distinguished Paper__ Awards."
+tags = []
+date = "2025-05-13"
+links = [
+  { name = "HAL", url = "https://inria.hal.science/hal-05065294v1" },
+  { name = "Source code", url = "https://gitlab.inria.fr/pphilipp/plugin-scrub" },
+]
+
+# Example from https://codeberg.org/salif/linkita-demo/raw/branch/demo/content/pages/projects/data.toml
+# [[project]]
+# name = "lorem"
+# desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+# tags = ["nisi", "saepe"]
+# links = [
+#     { name = "github", url = "https://example.com" },
+#     { name = "docs", url = "https://example.com" },
+# ]
+
+# [[project]]
+# name = "ipsum"
+# desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+# tags = ["lorem", "ipsum"]
+# links = [
+#     { name = "homepage", url = "https://example.com" },
+#     { name = "source", url = "https://example.com" },
+#     { name = "docs", url = "https://example.com" },
+# ]
+
+# [[project]]
+# name = "dolor sit"
+# desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+# tags = ["amet", "ipsum", "vero", "optio"]
+# links = [{ name = "github", url = "https://example.com" }]
+
+# [[project]]
+# name = "amet"
+# desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+# tags = ["lorem", "ipsum"]
+# links = [
+#     { name = "website", url = "https://example.com" },
+#     { name = "github", url = "https://example.com" },
+#     { name = "docs", url = "https://example.com" },
+#     { name = "wiki", url = "https://example.com" },
+# ]
+
+# [[project]]
+# name = "lorem-ipsum"
+# desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+# tags = ["dolor", "lorem", "ipsum", "amet"]
+# links = [
+#     { name = "github", url = "https://example.com" },
+#     { name = "docs", url = "https://example.com" },
+# ]
+
+# [[project]]
+# name = "praesentium"
+# desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+# tags = ["lorem", "ipsum"]
+# links = [
+#     { name = "homepage", url = "https://example.com" },
+#     { name = "github", url = "https://example.com" },
+#     { name = "docs", url = "https://example.com" },
+# ]
