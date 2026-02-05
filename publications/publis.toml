@@ -5,6 +5,7 @@ authors = ["Pierrick Philippe", "Mohamed Sabt", "Pierre-Alain Fouque"]
 desc = "Published in the proceedings of [DSN'25](https://dsn2025.github.io/). Received the __Best Paper__ and __Distinguished Paper__ Awards."
 tags = []
 date = "2025-05-13"
+awarded = true
 links = [
   { name = "HAL", url = "https://inria.hal.science/hal-05065294v1" },
   { name = "Source code", url = "https://gitlab.inria.fr/pphilipp/plugin-scrub" },
